@@ -9,12 +9,11 @@ $queryUrl = 'https://ditis.bitrix24.ru/rest/127/lsxdw9ax5km94qio/landing.repo.re
             'SECTIONS' => 'about',
             'CONTENT' =>'
             <div class="block">
-            <p class="one"><b>Отель Николь</b></p>
-            <p class="two"> <b><u>7 июня, 9:30 </u></b></p>
-            <p class="three"><b>Конференц-зал №1</b></p> 
-            <p class="four"><b>Сормовское ш., 15А к.1</b></p>
-        </div>
-        <div class="map"></div>'
+        <p class="one"><b>Отель Николь</b></p>
+        <p class="two"> <b><u>7 июня, 9:30 </u></b></p>
+        <p class="three"><b>Конференц-зал №1</b></p> 
+        <p class="four"><b>Сормовское ш., 15А к.1</b></p>
+    </div>'
         ),
         'manifest' => array(
             'assets' => array(
@@ -22,11 +21,9 @@ $queryUrl = 'https://ditis.bitrix24.ru/rest/127/lsxdw9ax5km94qio/landing.repo.re
                     'https://ditis.bitrix24.ru/disk/showFile/58935/?&ncc=1&ts=1524744130&filename=map.css'
                 ),
                 'js' => array(
-                    'https://ditis.bitrix24.ru/disk/showFile/58901/?&ncc=1&ts=1524738680&filename=map.js'
+                    'https://ditis.bitrix24.ru/disk/showFile/59537/?&ncc=1&ts=1524861595&filename=apiscript.js',
+                    'https://ditis.bitrix24.ru/disk/showFile/59535/?&ncc=1&ts=1524861613&filename=connectionapi.js'
                 ),
-                'ext' => array(
-                    'landing_form'
-                )
             )
         )
     ));

@@ -1,28 +1,35 @@
-window.onload = function (){
 
-    var src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCe-tW4VOqjv8uorWx8EpgRcGSjya0ogLY&callback=initMap';
-    
-    var block = document.getElementsByClassName('block')[0];
-    var tagscript = document.createElement('script');
-    tagscript.setAttribute('src', src);
-    console.log(tagscript);
 
-    var blockmap = document.createElement('script');
-    // blockmap.setAttribute('src', 'https://ditis.bitrix24.ru/disk/showFile/58901/?&ncc=1&ts=1524823892&filename=map.js');
+    // function initMap(){
+// window.onload=function(){
+        blockmap=document.createElement('div');
+        blockmap.className='map';
+        s =document.documentElement.appendChild(blockmap);
 
-    document.body.insertBefore(tagscript, block);
-    document.body.insertBefore(blockmap, block);
+        
+        divmap=document.getElementsByClassName('map')[0];
+        if(divmap){
+            console.log("Loading Map...");
+        var map;
+        var uluru = {lat:56.3211028, lng: 43.9301068};
 
-    
-    // document.body.insertBefore(tagscript, block);
-    // document.body.insertBefore(blockmap, block);
-    
-}
+        map=new google.maps.Map(document.getElementsByClassName("map")[0], {
+            zoom: 17,
+            center: uluru,
+            mapTypeControlOptions:{
+                mapTypeIds:["roadmap","satellite", "hybrid", "terrain", "styled_map"]
+            }
+            
+        });
+        
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map:map
+        });
 
-var req = new XMLHttpRequest();
-    req.open("GET", "https://ditis.bitrix24.ru/disk/showFile/58901/?&ncc=1&ts=1524823892&filename=map.js", false);
-    req.send(null);
-    console.log(req.status, req.statusText);
-    // → 200 OK
-    console.log(req.getResponseHeader("content-type"));
-    // → text/plain
+        console.log("Map load!");
+    // }
+    }
+    else {
+        console.log("This object is not found");
+    }
